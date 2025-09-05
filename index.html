@@ -108,7 +108,7 @@
         <div class="modal-content popup-animate">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Tawaran Spesial Rahasia</h2>
-            <p class="text-gray-600 mb-6">Apakah Anda memiliki masalah dengan seseorang yang mengganggu kehidupan Anda? Kami menyediakan jasa dukun terpercaya untuk menghilangkan orang yang tidak diinginkan. Dengan pengalaman puluhan tahun, Pak Sastro dari Desa Kalianyar, Bondowoso, Jawa Timur, siap membantu Anda dengan jaminan hasil maksimal. Diskresi penuh, harga terjangkau mulai Rp 5.000.000. Hubungi sekarang untuk konsultasi gratis!</p>
+            <p class="text-gray-600 mb-6">Apakah Anda memiliki masalah dengan seseorang yang mengganggu kehidupan Anda? Kami menyediakan jasa dukun terpercaya untuk menghilangkan orang yang tidak diinginkan. Dengan pengalaman puluhan tahun, Pak Farda dari Desa Karangayu, Kendal, Jawa Tengah, siap membantu Anda dengan jaminan hasil maksimal. Diskresi penuh, harga terjangkau mulai Rp 5.000.000. Hubungi sekarang untuk konsultasi gratis!</p>
             <button onclick="showMap()" class="bg-red-600 text-white px-6 py-3 rounded font-semibold hover:bg-red-700">Pesan Jasa dan Lihat Lokasi</button>
         </div>
     </div>
@@ -135,7 +135,7 @@
         });
 
         setInterval(() => {
-            if (hasScrolled && (Date.now() - scrollTimeStart >= 10000)) { // 10 detik setelah scroll pertama
+            if (hasScrolled && (Date.now() - scrollTimeStart >= 5000)) { // 10 detik setelah scroll pertama
                 document.getElementById('popupModal').style.display = 'block';
                 scrollTimeStart = null; // Reset agar tidak muncul lagi
                 hasScrolled = false;
