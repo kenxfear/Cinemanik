@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Store - Modern E-Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .close {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        /* Animation for popup */
+        .popup-animate {
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Elite Store</h1>
+            <nav class="space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">Beranda</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Produk</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <section class="hero bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg mb-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold mb-4">Temukan Produk Terbaik</h2>
+                    <p class="text-xl mb-6">Belanja hemat dengan koleksi eksklusif kami.</p>
+                    <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold">Belanja Sekarang</a>
+                </div>
+                <div class="md:w-1/2 mt-6 md:mt-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bf753988-17fb-49f2-a2ec-3e3a81e5141d.png" alt="Modern shopping display with vibrant products on shelves in a clean white background store setting with soft lighting and minimalist design" class="w-full rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <section class="products grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="product bg-white p-6 rounded-lg shadow-md">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71717ba3-04cf-4f12-abb5-11f5b8eaad56.png" alt="Minimalist white sneakers on a wooden floor in a modern urban apartment with cityscape view" class="w-full mb-4 rounded">
+                <h3 class="text-xl font-semibold mb-2">Sepatu Minimalis</h3>
+                <p class="text-gray-600 mb-4">Rp 500.000</p>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Tambah ke Keranjang</button>
+            </div>
+            <div class="product bg-white p-6 rounded-lg shadow-md">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48c04488-b268-4a24-93f1-1515c2bdaf61.png" alt="Elegant black smartphone on a sleek device stand with blurred city background and neon lights" class="w-full mb-4 rounded">
+                <h3 class="text-xl font-semibold mb-2">Smartphone Elegan</h3>
+                <p class="text-gray-600 mb-4">Rp 3.000.000</p>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Tambah ke Keranjang</button>
+            </div>
+            <div class="product bg-white p-6 rounded-lg shadow-md">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1d748e6-042d-40ba-a36a-f7f4408a2462.png" alt="Cozy gray hoodie on a hangers in a bright contemporary living room with plants and sunlight" class="w-full mb-4 rounded">
+                <h3 class="text-xl font-semibold mb-2">Hoodie Nyaman</h3>
+                <p class="text-gray-600 mb-4">Rp 200.000</p>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Tambah ke Keranjang</button>
+            </div>
+        </section>
+
+        <!-- Dummy content to enable scrolling -->
+        <section class="dummy-content py-16">
+            <p class="text-gray-700 mb-4">Ini adalah konten tambahan untuk memungkinkan pengguliran halaman. Gulirkan halaman ini untuk simulasi pengalaman berbelanja yang realistis. Kami menyediakan berbagai produk berkualitas dengan harga terjangkau, dikirim langsung ke pintu rumah Anda. Layanan pelanggan kami siap membantu 24/7.</p>
+            <p class="text-gray-700 mb-4">Pelajari lebih lanjut tentang produk-produk unggulan kami yang dirancang dengan bahan premium dan teknologi terkini. Setiap pembelian dilengkapi dengan garansi kepuasan, sehingga Anda dapat berbelanja dengan tenang.</p>
+            <p class="text-gray-700 mb-4">Kami bermitra dengan ekspedisi terpercaya untuk pengiriman cepat dan aman. Bergabunglah dengan ribuan pelanggan yang telah mempercayai toko online kami untuk kebutuhan sehari-hari mereka.</p>
+            <p class="text-gray-700">Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi tim dukungan kami melalui chat atau email. Terima kasih telah berbelanja di Elite Store – tempat belanja modern untuk gaya hidup kontemporer.</p>
+        </section>
+    </main>
+
+    <footer class="bg-white shadow-sm mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+            <p class="text-gray-600">&copy; 2023 Elite Store. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Pop-up Tawaran Dukun -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content popup-animate">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Tawaran Spesial Rahasia</h2>
+            <p class="text-gray-600 mb-6">Apakah Anda memiliki masalah dengan seseorang yang mengganggu kehidupan Anda? Kami menyediakan jasa dukun terpercaya untuk menghilangkan orang yang tidak diinginkan. Dengan pengalaman puluhan tahun, Pak Sastro dari Desa Kalianyar, Bondowoso, Jawa Timur, siap membantu Anda dengan jaminan hasil maksimal. Diskresi penuh, harga terjangkau mulai Rp 5.000.000. Hubungi sekarang untuk konsultasi gratis!</p>
+            <button onclick="showMap()" class="bg-red-600 text-white px-6 py-3 rounded font-semibold hover:bg-red-700">Pesan Jasa dan Lihat Lokasi</button>
+        </div>
+    </div>
+
+    <!-- Modal Map -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMapModal()">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Lokasi Pertemuan</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.881581419151!2d113.91678987499772!3d-7.780385079062159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e784b5f12345678%3A0x1234567890abcdef!2sDesa%20Kalianyar%2C%20Bondowoso%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1691234567890!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="text-gray-600 mt-4">Ikuti arah di peta ini untuk mencapai lokasi pertemuan dengan Pak Sastro. Pastikan Anda membawa persyaratan yang sudah dibahas dalam konsultasi.</p>
+        </div>
+    </div>
+
+    <script>
+        let scrollTimeStart = null;
+        let hasScrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (!hasScrolled) {
+                scrollTimeStart = Date.now();
+                hasScrolled = true;
+            }
+        });
+
+        setInterval(() => {
+            if (hasScrolled && (Date.now() - scrollTimeStart >= 10000)) { // 10 detik setelah scroll pertama
+                document.getElementById('popupModal').style.display = 'block';
+                scrollTimeStart = null; // Reset agar tidak muncul lagi
+                hasScrolled = false;
+            }
+        }, 1000);
+
+        function closeModal() {
+            document.getElementById('popupModal').style.display = 'none';
+        }
+
+        function showMap() {
+            document.getElementById('popupModal').style.display = 'none';
+            document.getElementById('mapModal').style.display = 'block';
+        }
+
+        function closeMapModal() {
+            document.getElementById('mapModal').style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('popupModal')) {
+                closeModal();
+            }
+            if (event.target == document.getElementById('mapModal')) {
+                closeMapModal();
+            }
+        };
+    </script>
+</body>
+</html>
+</content>
+</create_file>
